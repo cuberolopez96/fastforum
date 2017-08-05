@@ -1,0 +1,113 @@
+<?php
+
+namespace fast\ForumBundle\Entity;
+
+/**
+ * Message
+ */
+class Message
+{
+    /**
+     * @var string
+     */
+    private $body;
+
+    /**
+     * @var string
+     */
+    private $username;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \fast\ForumBundle\Entity\Threat
+     */
+    private $idthreat;
+
+
+    /**
+     * Set body
+     *
+     * @param string $body
+     *
+     * @return Message
+     */
+    public function setBody($body)
+    {
+        $this->body = $body;
+
+        return $this;
+    }
+
+    /**
+     * Get body
+     *
+     * @return string
+     */
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     *
+     * @return Message
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set idthreat
+     *
+     * @param \fast\ForumBundle\Entity\Threat $idthreat
+     *
+     * @return Message
+     */
+    public function setIdthreat(\fast\ForumBundle\Entity\Threat $idthreat = null)
+    {
+        $this->idthreat = $idthreat;
+
+        return $this;
+    }
+
+    /**
+     * Get idthreat
+     *
+     * @return \fast\ForumBundle\Entity\Threat
+     */
+    public function getIdthreat()
+    {
+        return $this->idthreat;
+    }
+}
+

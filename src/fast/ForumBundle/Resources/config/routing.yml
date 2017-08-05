@@ -1,0 +1,3 @@
+fast_forum_homepage:
+    path:     /
+    defaults: { _controller: fastForumBundle:Default:index }
