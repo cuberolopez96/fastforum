@@ -1,0 +1,18 @@
+{% extends 'fastForumBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+  <div class="card col s12 m10 offset-m1 grey darken-3 white-text">
+      <div class="card-content">
+          <div class="col s12  card-title">
+              <span>Pon tu apodo</span>
+          </div>
+          <form class="" action="/login" method="post">
+              <label for="">Apodo</label>
+              <input type="text" name="apodo" value="" required>
+              <input type="submit" class="btn grey darken-2" name="login" value="siguiente">
+          </form>
+
+      </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'fastForumBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+  <div class="card col s12 m10 offset-m1 grey darken-3 white-text">
+      <div class="card-content">
+          <div class="col s12  card-title">
+              <span>Añade Un Hilo</span>
+          </div>
+          <form class="" action="/threat-add" method="post">
+              {{form_widget(form)}}
+              <input type="submit" class="btn grey darken-2" name="crear" value="crear">
+          </form>
+
+      </div>
+  </div>
+</div>
+{% endblock %}

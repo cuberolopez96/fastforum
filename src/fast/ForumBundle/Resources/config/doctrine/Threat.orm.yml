@@ -1,0 +1,22 @@
+fast\ForumBundle\Entity\Threat:
+    type: entity
+    table: threat
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: Title
+    lifecycleCallbacks: {  }

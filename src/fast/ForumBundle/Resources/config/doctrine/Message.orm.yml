@@ -1,0 +1,44 @@
+fast\ForumBundle\Entity\Message:
+    type: entity
+    table: message
+    indexes:
+        IdThreat:
+            columns:
+                - IdThreat
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        body:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Body
+        username:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: Username
+    manyToOne:
+        idthreat:
+            targetEntity: Threat
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                IdThreat:
+                    referencedColumnName: Id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,32 @@
+{% extends 'fastForumBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+  <div class="card col s12 m10 offset-m1 grey darken-3 white-text">
+      <div class="card-content">
+          <div class="col s12  card-title">
+              <span class="">{{threat.title}}</span>
+          </div>
+          <div class="col s12">
+            {% for message in messages %}
+              <div class="card grey darken-2">
+
+                  <div class="card-content">
+                    <div class="card-title">
+                      {{message.username}}
+                    </div>
+                    {{message.body}}
+                  </div>
+              </div>
+            {% endfor %}
+          </div>
+
+      </div>
+  </div>
+  <div class="col s12 card grey darken-3 footer">
+      <form class="" action="/threat-{{threat.Id}}" method="post">
+          {{form_widget(form)}}
+          <input type="submit" class="btn grey darken-2"name="send" value="Send">
+      </form>
+  </div>
+</div>
+{% endblock %}

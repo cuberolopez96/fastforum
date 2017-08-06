@@ -1,3 +1,12 @@
 fast_forum_homepage:
     path:     /
-    defaults: { _controller: fastForumBundle:Default:index }
+    defaults: { _controller: fastForumBundle:Client:index }
+fast_forum_login:
+    path:     /login
+    defaults: { _controller: fastForumBundle:Client:login }
+fast_forum_threat_add:
+    path:     /threat-add
+    defaults: { _controller: fastForumBundle:Client:addthreat }
+fast_forum_threat_profile:
+    path:     /threat-{id}
+    defaults: { _controller: fastForumBundle:Client:threat }

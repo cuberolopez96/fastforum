@@ -1,0 +1,24 @@
+{% extends 'fastForumBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+  <div class="card col s12 m10 offset-m1 grey darken-3 white-text">
+      <div class="card-content">
+          <div class="col s12  card-title">
+              <span class="">Hilos</span><span class="right"><a href="/threat-add" class="material-icons grey-text darken-2">add</a></span>
+          </div>
+          <div class="col s12">
+            {% for threat in threats %}
+                <div class="card grey darken-2">
+                  <div class="card-content ">
+                    <div class="card-title">
+                        {{threat.title}}
+                        <span class="right"><a href="/threat-{{threat.Id}}" class="material-icons grey-text darken-1">visibility</a></span>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
