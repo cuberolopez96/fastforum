@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Orbitron');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css');
+*{
+  font-family: 'Arvo',serif;
+}
+.brand-logo,.card-title{
+  font-family: 'Orbitron',sans-serif;
+}
+.btn{
+  font-family: 'Orbitron',sans-serif;
+
+}
 .fixed{
   position:fixed;
 }
@@ -9,4 +20,5 @@
 }
 textarea{
   background: white;
+  border-radius: 5px;
 }

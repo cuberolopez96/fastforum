@@ -51,13 +51,13 @@ class ClientController extends Controller
       $form = $this->createForm(MessageType::class,$message);
       $form->handleRequest($request);
       $session = new Session();
-      $messages = $em->getRepository('fastForumBundle:Message')->findByIdthreat($threat);
       if ($form->isSubmitted() && $form->isValid()) {
         $message->setUsername($session->get('apodo'));
         $message->setIdthreat($threat);
         $em->persist($message);
         $em->flush();
       }
+      $messages = $em->getRepository('fastForumBundle:Message')->findByIdthreat($threat);
       return $this->render('fastForumBundle:Client:threat.html.twig', array('threat'=>$threat,
       'form'=>$form->createView(),
       'messages'=>$messages
