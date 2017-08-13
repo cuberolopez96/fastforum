@@ -110,4 +110,3 @@ class Message
         return $this->idthreat;
     }
 }
-

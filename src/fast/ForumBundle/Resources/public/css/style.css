@@ -22,3 +22,8 @@ textarea{
   background: white;
   border-radius: 5px;
 }
+select{
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}

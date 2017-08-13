@@ -3,14 +3,14 @@
 namespace fast\ForumBundle\Entity;
 
 /**
- * Threat
+ * Categoria
  */
-class Threat
+class Categoria
 {
     /**
      * @var string
      */
-    private $title;
+    private $nombre;
 
     /**
      * @var integer
@@ -19,27 +19,27 @@ class Threat
 
 
     /**
-     * Set title
+     * Set nombre
      *
-     * @param string $title
+     * @param string $nombre
      *
-     * @return Threat
+     * @return Categoria
      */
-    public function setTitle($title)
+    public function setNombre($nombre)
     {
-        $this->title = $title;
+        $this->nombre = $nombre;
 
         return $this;
     }
 
     /**
-     * Get title
+     * Get nombre
      *
      * @return string
      */
-    public function getTitle()
+    public function getNombre()
     {
-        return $this->title;
+        return $this->nombre;
     }
 
     /**
@@ -52,3 +52,4 @@ class Threat
         return $this->id;
     }
 }
+

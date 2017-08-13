@@ -5,7 +5,7 @@ namespace fast\ForumBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 class ThreatType extends AbstractType
 {
     /**
@@ -13,9 +13,12 @@ class ThreatType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title');
+        $builder->add('title')->add('categoria',EntityType::class,array(
+          'class'=>'fastForumBundle:Categoria',
+          'choice_label'=>'nombre'
+        ));
     }
-    
+
     /**
      * {@inheritdoc}
      */
